@@ -110,11 +110,11 @@ if __name__=="__main__":
             output_name=first_name+'_'+second_name+'.csv'
             first_file = pd.read_csv(input_files[i], header=None, index_col=None)  # sys.argv[1])
             end = len(first_file.values[0])
-            first_file = first_file.values[:, 0:end - 1]
+            first_file = first_file.values[:, 0:]
             first_file = pd.DataFrame(first_file).astype(float)
             second_file = pd.read_csv(input_files[j], header=None, index_col=None)
             end= len(second_file.values[0])
-            second_file=second_file.values[:,0:end-1]
+            second_file=second_file.values[:,0:]
             second_file = pd.DataFrame(second_file).astype(float)
             print "first_file_num:", len(first_file)
             print "first_file_length:", len(first_file.values[0])
